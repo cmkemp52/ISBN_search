@@ -3,7 +3,6 @@ searchISBN = function(select){
         .then(response => response.text())
         .then(data => data.substring(18,data.length-1))
         .then(trimdata => JSON.parse(trimdata))
-        //.then(jsondata=> chrome.tabs.create({"url": `${jsondata.info_url}`}))
         .then(function(jsondata){
             for(let k in jsondata){
                 chrome.tabs.create({"url": `${jsondata[k].info_url}`});
