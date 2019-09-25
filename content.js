@@ -10,7 +10,6 @@ searchISBN = function(select){
         })
         .catch(err => console.log(err));
 }
-//chrome.tabs.create({"url": response.info_irl})
 chrome.contextMenus.create({
     title: "Search ISBN",
     contexts:["selection"],
